@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "background_image": "/images/uploads/bg-homepage.jpg",
+    "title": "KHÁM PHÁ THẾ GIỚI STEM TOWN SÁNG TẠO",
+    "subtitle": "Trải nghiệm học tập tương tác cho trẻ em, nơi khoa học và công nghệ gặp gỡ sự sáng tạo.",
+    "cta_label": "Tìm hiểu ngay",
+    "cta_url": "/about-us/"
+  },
+  "stem_intro": {
+    "heading": "STEM là gì?",
+    "description": "STEM là viết tắt của Science (Khoa học), Technology (Công nghệ), Engineering (Kỹ thuật) và Mathematics (Toán học). Giáo dục STEM hướng đến mục tiêu giúp trẻ biết vận dụng kiến thức liên môn để giải quyết các vấn đề trong thực tiễn.",
+    "pillars": [
+      { "letter": "S", "title": "Science", "description": "Khám phá khoa học qua mô hình thực tế và thí nghiệm trực quan." },
+      { "letter": "T", "title": "Technology", "description": "Làm chủ công nghệ và lập trình thiết bị thông minh." },
+      { "letter": "E", "title": "Engineering", "description": "Thiết kế, lắp ráp và vận hành robot." },
+      { "letter": "M", "title": "Mathematics", "description": "Ứng dụng toán học vào thuật toán và giải quyết vấn đề." }
+    ]
+  },
+  "brand_story": {
+    "image": "/images/uploads/brand-story.jpg",
+    "eyebrow": "CÂU CHUYỆN THƯƠNG HIỆU",
+    "heading": "Hành trình kiến tạo tương lai",
+    "description": "STEM TOWN là trung tâm trải nghiệm khoa học và công nghệ đầu tiên tại TP. Hồ Chí Minh. Chúng tôi tin rằng mỗi đứa trẻ đều mang trong mình sự tò mò to lớn về thế giới xung quanh. Với niềm tin đó, STEM TOWN nuôi dưỡng nguồn cảm hứng khoa học và công nghệ để các em phát triển trong kỷ nguyên công nghệ.",
+    "highlights": [
+      "Tự do trải nghiệm các hoạt động khoa học, công nghệ",
+      "Hào hứng tương tác với thiết bị công nghệ hiện đại, giàu tính giáo dục",
+      "Tiếp xúc với điểm giao nhau giữa kiến thức và ứng dụng thực tiễn",
+      "Hình thành tư duy chủ động, học bằng thử nghiệm và sáng tạo",
+      "Được ưu tiên sáng tạo sản phẩm cá nhân hóa"
+    ],
+    "cta_label": "Tìm hiểu ngay",
+    "cta_url": "/about-us/"
+  },
+  "spaces": {
+    "eyebrow": "KHÔNG GIAN TRẢI NGHIỆM",
+    "heading": "Khám phá không gian tại STEM TOWN",
+    "description": "Chúng tôi tạo ra một môi trường giàu tính giáo dục về Khoa học - Công nghệ một cách sinh động để trẻ dễ tiếp thu.",
+    "floors": [
+      { "level": "Tầng 1", "title": "Drone và Thực tế ảo", "image": "/images/uploads/space-1.jpg" },
+      { "level": "Tầng 2", "title": "Robotics, Trí tuệ nhân tạo và IoT", "image": "/images/uploads/space-2.jpg" },
+      { "level": "Tầng 3", "title": "Khoa học tương tác, Không gian sáng chế và Sản xuất số", "image": "/images/uploads/space-3.jpg" }
+    ]
+  },
+  "courses_teaser": {
+    "eyebrow": "CHƯƠNG TRÌNH HỌC",
+    "heading": "Chương trình học tại STEM TOWN",
+    "image": "/images/uploads/courses-teaser.jpg",
+    "description": "Lộ trình nhiều cấp độ — từ robot lập trình thẻ lệnh, Scratch đến AI & Robotics — trẻ học công nghệ thật sự qua các dự án vui nhộn và trực quan.",
+    "cta_label": "Tìm hiểu ngay",
+    "cta_url": "/khoa-hoc/"
+  },
+  "partners_heading": "Đồng hành cùng các đối tác công nghệ hàng đầu"
+}
