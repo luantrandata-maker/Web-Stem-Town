@@ -1,0 +1,32 @@
+{
+  "site_name": "STEM TOWN",
+  "tagline": "Khơi nguồn đam mê STEM cho trẻ",
+  "logo_light": "/images/uploads/logo-light.png",
+  "logo_dark": "/images/uploads/logo-dark.png",
+  "company_name": "CÔNG TY CỔ PHẦN GIÁO DỤC KDI",
+  "tax_code": "0314236694",
+  "tax_note": "do Sở Tài chính Thành phố Hồ Chí Minh cấp ngày 17/02/2017",
+  "address": "Tầng trệt – Lửng – Tầng 1 – Tầng 2, số 39 – 41 – 43 Trần Quý Kiên, Phường Bình Trưng, Thành phố Hồ Chí Minh, Việt Nam",
+  "phone": "028 7300 8898 (phím 2)",
+  "phone_link": "tel:02873008898",
+  "email": "cskh.stemtown@kdi.edu.vn",
+  "working_hours": "Thứ 2 đến thứ 6: 17:00-20:00 | Thứ 7 & chủ nhật: 08:00-20:00",
+  "map_link": "https://www.google.com/maps/place/STEM+TOWN",
+  "social": {
+    "facebook": "https://www.facebook.com/stemtown.kdieducation",
+    "youtube": "https://www.youtube.com/@STEMTOWN",
+    "tiktok": "https://www.tiktok.com/@stemtown"
+  },
+  "nav": [
+    { "label": "Về STEM TOWN", "url": "/about-us/" },
+    { "label": "Khóa học", "url": "/khoa-hoc/" },
+    { "label": "Liên hệ", "url": "/lien-he/" }
+  ],
+  "footer_columns": {
+    "gioi_thieu": [
+      { "label": "Giới thiệu STEM TOWN", "url": "/about-us/" },
+      { "label": "Đối tác chiến lược", "url": "/about-us/" },
+      { "label": "Quy định chung", "url": "/quy-dinh/" }
+    ]
+  }
+}
