@@ -4,6 +4,8 @@ backend:
   branch: main
   base_url: https://stemtown.netlify.app  # <-- đổi thành domain Netlify (hoặc domain riêng) của bạn
   auth_endpoint: api/auth
+  identity_url: https://auth.decapbridge.com/sites/c2d4e45f-5e2f-4cf3-9f48-ff7801090d89
+  gateway_url: https://gateway.decapbridge.com
 
 # Cho phép xem trước bản nháp trước khi publish
 publish_mode: editorial_workflow
