@@ -1,0 +1,214 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME   # <-- đổi thành owner/repo GitHub thực tế của bạn
+  branch: main
+  base_url: https://YOUR_SITE_NAME.netlify.app  # <-- đổi thành domain Netlify (hoặc domain riêng) của bạn
+  auth_endpoint: api/auth
+
+# Cho phép xem trước bản nháp trước khi publish
+publish_mode: editorial_workflow
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+locale: "vi"
+
+collections:
+  # ---------- CÀI ĐẶT CHUNG (site.json) ----------
+  - name: "settings"
+    label: "Cài đặt chung"
+    files:
+      - name: "site"
+        label: "Thông tin trang web"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Tên trang", name: "site_name", widget: "string" }
+          - { label: "Khẩu hiệu (tagline)", name: "tagline", widget: "string" }
+          - { label: "Logo (nền sáng - cho header)", name: "logo_dark", widget: "image" }
+          - { label: "Logo (nền tối - cho footer)", name: "logo_light", widget: "image" }
+          - { label: "Tên công ty", name: "company_name", widget: "string" }
+          - { label: "Mã số thuế", name: "tax_code", widget: "string" }
+          - { label: "Ghi chú MST", name: "tax_note", widget: "string" }
+          - { label: "Địa chỉ", name: "address", widget: "text" }
+          - { label: "Số điện thoại (hiển thị)", name: "phone", widget: "string" }
+          - { label: "Link điện thoại (tel:...)", name: "phone_link", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Giờ làm việc", name: "working_hours", widget: "string" }
+          - { label: "Link Google Maps", name: "map_link", widget: "string" }
+          - label: "Mạng xã hội"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook", name: "facebook", widget: "string" }
+              - { label: "Youtube", name: "youtube", widget: "string" }
+              - { label: "TikTok", name: "tiktok", widget: "string" }
+          - label: "Menu điều hướng"
+            name: "nav"
+            widget: "list"
+            fields:
+              - { label: "Tên hiển thị", name: "label", widget: "string" }
+              - { label: "Đường dẫn", name: "url", widget: "string" }
+
+  # ---------- TRANG CHỦ ----------
+  - name: "home"
+    label: "Trang chủ"
+    files:
+      - name: "home"
+        label: "Nội dung trang chủ"
+        file: "src/content/home.json"
+        fields:
+          - label: "Banner đầu trang (Hero)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Ảnh nền", name: "background_image", widget: "image" }
+              - { label: "Tiêu đề", name: "title", widget: "string" }
+              - { label: "Mô tả ngắn", name: "subtitle", widget: "text" }
+              - { label: "Nhãn nút bấm", name: "cta_label", widget: "string" }
+              - { label: "Đường dẫn nút bấm", name: "cta_url", widget: "string" }
+          - label: "Giới thiệu STEM"
+            name: "stem_intro"
+            widget: "object"
+            fields:
+              - { label: "Tiêu đề", name: "heading", widget: "string" }
+              - { label: "Mô tả", name: "description", widget: "text" }
+              - label: "4 trụ cột S-T-E-M"
+                name: "pillars"
+                widget: "list"
+                fields:
+                  - { label: "Chữ cái", name: "letter", widget: "string" }
+                  - { label: "Tên", name: "title", widget: "string" }
+                  - { label: "Mô tả", name: "description", widget: "text" }
+          - label: "Câu chuyện thương hiệu"
+            name: "brand_story"
+            widget: "object"
+            fields:
+              - { label: "Hình ảnh", name: "image", widget: "image" }
+              - { label: "Nhãn nhỏ (eyebrow)", name: "eyebrow", widget: "string" }
+              - { label: "Tiêu đề", name: "heading", widget: "string" }
+              - { label: "Mô tả", name: "description", widget: "text" }
+              - { label: "Danh sách điểm nổi bật", name: "highlights", widget: "list" }
+              - { label: "Nhãn nút bấm", name: "cta_label", widget: "string" }
+              - { label: "Đường dẫn nút bấm", name: "cta_url", widget: "string" }
+          - label: "Không gian trải nghiệm"
+            name: "spaces"
+            widget: "object"
+            fields:
+              - { label: "Nhãn nhỏ", name: "eyebrow", widget: "string" }
+              - { label: "Tiêu đề", name: "heading", widget: "string" }
+              - { label: "Mô tả", name: "description", widget: "text" }
+              - label: "Các tầng"
+                name: "floors"
+                widget: "list"
+                fields:
+                  - { label: "Tên tầng", name: "level", widget: "string" }
+                  - { label: "Tiêu đề", name: "title", widget: "string" }
+                  - { label: "Hình ảnh", name: "image", widget: "image" }
+          - label: "Giới thiệu khóa học"
+            name: "courses_teaser"
+            widget: "object"
+            fields:
+              - { label: "Nhãn nhỏ", name: "eyebrow", widget: "string" }
+              - { label: "Tiêu đề", name: "heading", widget: "string" }
+              - { label: "Hình ảnh", name: "image", widget: "image" }
+              - { label: "Mô tả", name: "description", widget: "text" }
+              - { label: "Nhãn nút bấm", name: "cta_label", widget: "string" }
+              - { label: "Đường dẫn nút bấm", name: "cta_url", widget: "string" }
+          - { label: "Tiêu đề khối đối tác", name: "partners_heading", widget: "string" }
+
+  # ---------- GIỚI THIỆU ----------
+  - name: "about"
+    label: "Trang Giới thiệu"
+    files:
+      - name: "about"
+        label: "Nội dung Giới thiệu"
+        file: "src/content/about.json"
+        fields:
+          - { label: "Ảnh banner", name: "hero_image", widget: "image" }
+          - { label: "Tiêu đề", name: "heading", widget: "string" }
+          - { label: "Đoạn giới thiệu", name: "intro", widget: "text" }
+          - { label: "Tiêu đề sứ mệnh", name: "mission_heading", widget: "string" }
+          - { label: "Nội dung sứ mệnh", name: "mission_text", widget: "text" }
+          - { label: "Tiêu đề đối tác", name: "partners_heading", widget: "string" }
+          - { label: "Nội dung đối tác", name: "partners_text", widget: "text" }
+
+  # ---------- LIÊN HỆ ----------
+  - name: "contact"
+    label: "Trang Liên hệ"
+    files:
+      - name: "contact"
+        label: "Nội dung Liên hệ"
+        file: "src/content/contact.json"
+        fields:
+          - { label: "Tiêu đề", name: "heading", widget: "string" }
+          - { label: "Đoạn giới thiệu", name: "intro", widget: "text" }
+          - { label: "Ghi chú form", name: "form_note", widget: "string" }
+
+  # ---------- ĐỘI NGŨ ----------
+  - name: "team"
+    label: "Đội ngũ chuyên gia"
+    folder: "src/content/team"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    fields:
+      - { label: "Thứ tự hiển thị", name: "order", widget: "number", default: 1 }
+      - { label: "Họ tên", name: "name", widget: "string" }
+      - { label: "Chức danh / mô tả", name: "title", widget: "string" }
+      - { label: "Ảnh chân dung", name: "photo", widget: "image" }
+
+  # ---------- KHÓA HỌC ----------
+  - name: "courses"
+    label: "Khóa học"
+    folder: "src/content/courses"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "age_group"
+    fields:
+      - { label: "Thứ tự hiển thị", name: "order", widget: "number", default: 1 }
+      - { label: "Tên nhóm tuổi", name: "age_group", widget: "string" }
+      - { label: "Slug (đường dẫn)", name: "slug", widget: "string" }
+      - { label: "Hình ảnh", name: "image", widget: "image" }
+      - { label: "Mô tả ngắn", name: "summary", widget: "text" }
+      - { label: "Các học phần", name: "modules", widget: "list" }
+
+  # ---------- ĐÁNH GIÁ ----------
+  - name: "testimonials"
+    label: "Đánh giá học viên"
+    folder: "src/content/testimonials"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    fields:
+      - { label: "Thứ tự hiển thị", name: "order", widget: "number", default: 1 }
+      - { label: "Nội dung đánh giá", name: "quote", widget: "text" }
+      - { label: "Tên người đánh giá", name: "name", widget: "string" }
+      - { label: "Vai trò (Phụ huynh/Học sinh)", name: "role", widget: "string" }
+      - { label: "Chữ cái đại diện (avatar)", name: "initial", widget: "string" }
+
+  # ---------- ĐỐI TÁC ----------
+  - name: "partners"
+    label: "Đối tác"
+    folder: "src/content/partners"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    fields:
+      - { label: "Thứ tự hiển thị", name: "order", widget: "number", default: 1 }
+      - { label: "Tên đối tác", name: "name", widget: "string" }
+      - { label: "Mô tả phụ", name: "subtitle", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image" }
+
+  # ---------- CHÍNH SÁCH ----------
+  - name: "policies"
+    label: "Trang Chính sách"
+    folder: "src/content/policies"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    fields:
+      - { label: "Tiêu đề", name: "title", widget: "string" }
+      - { label: "Slug (đường dẫn)", name: "slug", widget: "string" }
+      - { label: "Thứ tự hiển thị", name: "order", widget: "number", default: 1 }
+      - { label: "Ẩn khỏi menu (permalink false)", name: "permalink", widget: "hidden", default: false }
+      - { label: "Nội dung", name: "body", widget: "markdown" }
