@@ -1,0 +1,53 @@
+<footer class="site-footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <img src="{{ site.logo_light }}" alt="{{ site.site_name }}" class="brand__logo brand__logo--light">
+      <p>{{ site.company_name }}<br>
+      Mã số thuế: {{ site.tax_code }}, {{ site.tax_note }}.<br>
+      Địa chỉ: {{ site.address }}</p>
+      <div class="footer__social">
+        <a href="{{ site.social.facebook }}" aria-label="Facebook">FB</a>
+        <a href="{{ site.social.youtube }}" aria-label="Youtube">YT</a>
+        <a href="{{ site.social.tiktok }}" aria-label="TikTok">TT</a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h3>Giới thiệu</h3>
+      <ul>
+        {% for item in site.footer_columns.gioi_thieu %}
+        <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h3>Khóa học</h3>
+      <ul>
+        {% for c in collections.courses %}
+        <li><a href="/khoa-hoc/?slug={{ c.slug }}">{{ c.age_group }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h3>Liên hệ</h3>
+      <ul>
+        <li><a href="{{ site.map_link }}">{{ site.address }}</a></li>
+        <li><a href="{{ site.phone_link }}">{{ site.phone }}</a></li>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer__bottom">
+    <p>© {{ currentYear }} {{ site.site_name }}. All rights reserved.</p>
+    <div class="footer__policies">
+      {% for p in collections.policies %}
+      <a href="/chinh-sach/{{ p.data.slug }}/">{{ p.data.title }}</a>
+      {% endfor %}
+    </div>
+    <p class="footer__hours">{{ site.working_hours }}</p>
+  </div>
+</footer>
+<script src="/js/main.js" defer></script>

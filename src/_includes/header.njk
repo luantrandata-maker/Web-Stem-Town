@@ -1,0 +1,22 @@
+<header class="site-header">
+  <div class="wrap site-header__row">
+    <a href="/" class="brand">
+      <img src="{{ site.logo_dark }}" alt="{{ site.site_name }}" class="brand__logo">
+      <span class="brand__name">{{ site.site_name }}</span>
+    </a>
+    <nav class="main-nav" aria-label="Điều hướng chính">
+      {% for item in site.nav %}
+      <a href="{{ item.url }}">{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+    <a class="btn btn--ghost header-cta" href="{{ site.phone_link }}">{{ site.phone }}</a>
+    <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="main-nav main-nav--mobile" data-nav-mobile>
+    {% for item in site.nav %}
+    <a href="{{ item.url }}">{{ item.label }}</a>
+    {% endfor %}
+  </nav>
+</header>
