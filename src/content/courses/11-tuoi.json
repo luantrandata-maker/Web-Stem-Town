@@ -1,0 +1,11 @@
+{
+  "order": 3,
+  "age_group": "Dành cho trẻ từ 11 tuổi (lớp 6+)",
+  "slug": "danh-cho-tre-tu-11-tuoi",
+  "image": "/images/uploads/course-11.jpg",
+  "summary": "Trải nghiệm công nghệ cao với AI & Robotics, làm chủ tư duy lập trình thực thụ.",
+  "modules": [
+    "AI & Robotics Ugot - Trải nghiệm công nghệ cao",
+    "Dự án lập trình AI thực tế"
+  ]
+}

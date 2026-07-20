@@ -1,0 +1,11 @@
+{
+  "order": 2,
+  "age_group": "Dành cho trẻ từ 8 - 10 tuổi",
+  "slug": "danh-cho-tre-tu-8-10-tuoi",
+  "image": "/images/uploads/course-8-10.jpg",
+  "summary": "Lắp ráp và điều khiển robot, làm quen lập trình khối kéo-thả nâng cao.",
+  "modules": [
+    "Robotics xBot - Lắp ráp & Điều khiển",
+    "Lập trình khối nâng cao"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "order": 1,
+  "age_group": "Dành cho trẻ từ 5 - 7 tuổi",
+  "slug": "danh-cho-tre-tu-5-7-tuoi",
+  "image": "/images/uploads/course-5-7.jpg",
+  "summary": "Làm quen tư duy logic qua robot lập trình thẻ lệnh và kể chuyện số bằng Scratch Junior.",
+  "modules": [
+    "Robot mTiny - Lập trình thẻ lệnh",
+    "Scratch Junior - Sáng tạo câu chuyện số"
+  ]
+}
