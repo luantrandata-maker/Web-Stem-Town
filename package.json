@@ -1,0 +1,16 @@
+{
+  "name": "stemtown-website",
+  "version": "1.0.0",
+  "description": "Website STEM TOWN - Eleventy + Decap CMS + Netlify",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
