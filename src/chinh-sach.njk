@@ -1,0 +1,23 @@
+---
+layout: base.njk
+pagination:
+  data: collections.policies
+  size: 1
+  alias: policy
+permalink: "/chinh-sach/{{ policy.data.slug }}/"
+eleventyComputed:
+  title: "{{ policy.data.title }}"
+eleventyExcludeFromCollections: true
+---
+<section class="page-hero page-hero--compact">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--light">CHÍNH SÁCH</p>
+    <h1>{{ policy.data.title }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap wrap--narrow policy-body">
+    {{ policy.templateContent | safe }}
+  </div>
+</section>

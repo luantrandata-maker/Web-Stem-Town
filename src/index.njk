@@ -1,0 +1,139 @@
+---
+layout: base.njk
+title: "Trang chủ"
+description: "Trang chủ của STEM TOWN - Nơi khơi nguồn và phát triển niềm đam mê công nghệ, lập trình, robot cho trẻ em."
+---
+<section class="hero" style="--hero-bg: url('{{ home.hero.background_image }}')">
+  <div class="wrap hero__inner">
+    <p class="eyebrow eyebrow--light">MISSION CONTROL / STEM TOWN</p>
+    <h1>{{ home.hero.title }}</h1>
+    <p class="hero__subtitle">{{ home.hero.subtitle }}</p>
+    <a class="btn btn--primary" href="{{ home.hero.cta_url }}">{{ home.hero.cta_label }}</a>
+  </div>
+</section>
+
+<section class="section stem-intro">
+  <div class="wrap">
+    <h2>{{ home.stem_intro.heading }}</h2>
+    <p class="section__lead">{{ home.stem_intro.description }}</p>
+    <div class="pillars">
+      {% for p in home.stem_intro.pillars %}
+      <div class="pillar-card pillar-card--{{ loop.index }}">
+        <span class="pillar-card__letter">{{ p.letter }}</span>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark brand-story">
+  <div class="wrap brand-story__grid">
+    <div class="brand-story__image">
+      <img src="{{ home.brand_story.image }}" alt="{{ home.brand_story.heading }}" loading="lazy">
+    </div>
+    <div class="brand-story__copy">
+      <p class="eyebrow">{{ home.brand_story.eyebrow }}</p>
+      <h2>{{ home.brand_story.heading }}</h2>
+      <p>{{ home.brand_story.description }}</p>
+      <ul class="checklist">
+        {% for h in home.brand_story.highlights %}
+        <li>{{ h }}</li>
+        {% endfor %}
+      </ul>
+      <a class="btn btn--primary" href="{{ home.brand_story.cta_url }}">{{ home.brand_story.cta_label }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section spaces">
+  <div class="wrap">
+    <p class="eyebrow">{{ home.spaces.eyebrow }}</p>
+    <h2>{{ home.spaces.heading }}</h2>
+    <p class="section__lead">{{ home.spaces.description }}</p>
+    <div class="floor-directory">
+      {% for f in home.spaces.floors %}
+      <div class="floor-panel">
+        <img src="{{ f.image }}" alt="{{ f.title }}" loading="lazy">
+        <div class="floor-panel__tag">{{ f.level }}</div>
+        <h3>{{ f.title }}</h3>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark team">
+  <div class="wrap">
+    <p class="eyebrow">VỀ STEM TOWN</p>
+    <h2>Đội ngũ chuyên gia</h2>
+    <div class="team-grid">
+      {% for member in collections.team %}
+      <div class="team-card">
+        <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+        <h3>{{ member.name }}</h3>
+        <p>{{ member.title }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section courses-teaser">
+  <div class="wrap courses-teaser__grid">
+    <div class="courses-teaser__copy">
+      <p class="eyebrow">{{ home.courses_teaser.eyebrow }}</p>
+      <h2>{{ home.courses_teaser.heading }}</h2>
+      <div class="age-tabs">
+        {% for c in collections.courses %}
+        <span class="age-tab">{{ c.age_group }}</span>
+        {% endfor %}
+      </div>
+      <p>{{ home.courses_teaser.description }}</p>
+      <a class="btn btn--primary" href="{{ home.courses_teaser.cta_url }}">{{ home.courses_teaser.cta_label }}</a>
+    </div>
+    <div class="courses-teaser__image">
+      <img src="{{ home.courses_teaser.image }}" alt="Chương trình học" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark testimonials">
+  <div class="wrap">
+    <h2>Nhận xét từ học viên</h2>
+    <p class="section__lead">Những trải nghiệm học tập tiên phong tại STEM TOWN được thiết kế để truyền cảm hứng và khơi dậy sự tò mò tự nhiên của mỗi học sinh.</p>
+    <div class="testimonial-grid">
+      {% for t in collections.testimonials %}
+      <blockquote class="testimonial-card">
+        <p>&ldquo;{{ t.quote }}&rdquo;</p>
+        <footer>
+          <span class="testimonial-card__avatar">{{ t.initial }}</span>
+          <div>
+            <strong>{{ t.name }}</strong>
+            <span>{{ t.role }}</span>
+          </div>
+        </footer>
+      </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section partners">
+  <div class="wrap">
+    <p class="eyebrow">ĐỐI TÁC ĐỒNG HÀNH</p>
+    <h2>{{ home.partners_heading }}</h2>
+    <div class="partner-grid">
+      {% for p in collections.partners %}
+      <div class="partner-card">
+        <img src="{{ p.logo }}" alt="{{ p.name }}" loading="lazy">
+        <div>
+          <strong>{{ p.name }}</strong>
+          <span>{{ p.subtitle }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

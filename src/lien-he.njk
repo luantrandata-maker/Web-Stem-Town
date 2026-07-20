@@ -1,0 +1,43 @@
+---
+layout: base.njk
+title: "Liên hệ"
+description: "Liên hệ với STEM TOWN để được tư vấn khóa học và đặt lịch tham quan trải nghiệm."
+permalink: /lien-he/
+---
+<section class="page-hero page-hero--compact">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--light">LIÊN HỆ</p>
+    <h1>{{ contact.heading }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <p class="section__lead">{{ contact.intro }}</p>
+      <ul class="contact-list">
+        <li><strong>Địa chỉ</strong><span>{{ site.address }}</span></li>
+        <li><strong>Điện thoại</strong><span><a href="{{ site.phone_link }}">{{ site.phone }}</a></span></li>
+        <li><strong>Email</strong><span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span></li>
+        <li><strong>Giờ làm việc</strong><span>{{ site.working_hours }}</span></li>
+      </ul>
+    </div>
+    <form class="contact-form" name="lien-he" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="lien-he">
+      <p>{{ contact.form_note }}</p>
+      <label>Họ và tên
+        <input type="text" name="ho_ten" required>
+      </label>
+      <label>Số điện thoại
+        <input type="tel" name="dien_thoai" required>
+      </label>
+      <label>Email
+        <input type="email" name="email">
+      </label>
+      <label>Nội dung
+        <textarea name="noi_dung" rows="4"></textarea>
+      </label>
+      <button class="btn btn--primary" type="submit">Gửi liên hệ</button>
+    </form>
+  </div>
+</section>

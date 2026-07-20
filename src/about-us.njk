@@ -1,0 +1,59 @@
+---
+layout: base.njk
+title: "Giới thiệu STEM TOWN"
+description: "Tìm hiểu về STEM TOWN - trung tâm trải nghiệm khoa học và công nghệ đầu tiên tại TP. Hồ Chí Minh."
+permalink: /about-us/
+---
+<section class="page-hero" style="--hero-bg: url('{{ about.hero_image }}')">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--light">VỀ CHÚNG TÔI</p>
+    <h1>{{ about.heading }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap wrap--narrow">
+    <p class="section__lead">{{ about.intro }}</p>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow">{{ about.mission_heading }}</p>
+    <p class="section__lead">{{ about.mission_text }}</p>
+  </div>
+</section>
+
+<section class="section team">
+  <div class="wrap">
+    <p class="eyebrow">ĐỘI NGŨ CHUYÊN GIA</p>
+    <h2>Những người kiến tạo STEM TOWN</h2>
+    <div class="team-grid">
+      {% for member in collections.team %}
+      <div class="team-card">
+        <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+        <h3>{{ member.name }}</h3>
+        <p>{{ member.title }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section partners">
+  <div class="wrap">
+    <p class="eyebrow">{{ about.partners_heading }}</p>
+    <p class="section__lead">{{ about.partners_text }}</p>
+    <div class="partner-grid">
+      {% for p in collections.partners %}
+      <div class="partner-card">
+        <img src="{{ p.logo }}" alt="{{ p.name }}" loading="lazy">
+        <div>
+          <strong>{{ p.name }}</strong>
+          <span>{{ p.subtitle }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
