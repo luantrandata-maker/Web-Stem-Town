@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME   # <-- đổi thành owner/repo GitHub thực tế của bạn
+  repo: https://github.com/luantrandata-maker/Web-Stem-Town   # <-- đổi thành owner/repo GitHub thực tế của bạn
   branch: main
-  base_url: https://YOUR_SITE_NAME.netlify.app  # <-- đổi thành domain Netlify (hoặc domain riêng) của bạn
+  base_url: https://stemtown.netlify.app  # <-- đổi thành domain Netlify (hoặc domain riêng) của bạn
   auth_endpoint: api/auth
 
 # Cho phép xem trước bản nháp trước khi publish
