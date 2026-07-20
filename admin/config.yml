@@ -3,7 +3,7 @@ backend:
   repo: https://github.com/luantrandata-maker/Web-Stem-Town   # <-- đổi thành owner/repo GitHub thực tế của bạn
   branch: main
   base_url: https://stemtown.netlify.app  # <-- đổi thành domain Netlify (hoặc domain riêng) của bạn
-  auth_endpoint: api/auth
+  auth_endpoint: 7ebf4c7a8ede6565a209a76a1851c5817a809034
 
 # Cho phép xem trước bản nháp trước khi publish
 publish_mode: editorial_workflow
